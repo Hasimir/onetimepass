@@ -3,10 +3,12 @@ onetimepass module is designed to work for one-time passwords - HMAC-based and
 time-based. It is compatible with Google Authenticator application and
 applications based on it.
 
-@version: 0.2.2
+@version: 0.2.3-authy-otp-match-1a
 @author: Tomasz Jaskowski
 @contact: http://github.com/tadeck
 @license: MIT
+@modification: Ben McGinnes
+@contact: http://github.com/Hasimir
 
 >>> secret = b'MFRGGZDFMZTWQ2LK'
 >>> get_hotp(secret, 1) == 765705
