@@ -99,7 +99,7 @@ def get_hotp(secret, intervals_no, as_string=False, casefold=True):
     except (TypeError):
         raise TypeError('Incorrect secret')
     msg = struct.pack('>Q', intervals_no)
-    hmac_digest = hmac.new(key, msg, hashlib.sha1).digest()
+    hmac_digest = hmac.new(key, msg, hashlib.sha256).digest()
     ob = hmac_digest[19] if six.PY3 else ord(hmac_digest[19])
     o = ob & 15
     token_base = struct.unpack('>I', hmac_digest[o:o + 4])[0] & 0x7fffffff
