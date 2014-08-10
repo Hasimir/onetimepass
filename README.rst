@@ -22,6 +22,9 @@ Changelog
 +---------+------------+------------------------------------------------------+
 | Version | Date       | Changes                                              |
 +=========+============+======================================================+
+| 0.2.3a  | 2014-08-10 | - Update to 256-bit hash, 7 digits                   |
+|         |            | - Minor docs update, still requires testing          |
++---------+------------+------------------------------------------------------+
 | 0.2.2   | 2013-07-12 | - license clarification,                             |
 |         |            | - removal of compiled documentation from the sources,|
 +---------+------------+------------------------------------------------------+
@@ -43,9 +46,12 @@ What is OneTimePass
 ===================
 
 OneTimePass (actually ``onetimepass``) is a module for generating one-time
-passwords, namely HOTPs (HMAC-based one-time passowords) and TOTPs (time-based
+passwords, namely HOTPs (HMAC-based one-time passwords) and TOTPs (time-based
 one-time passwords). They are used eg. within Google Authenticator application
 for Android or iPhone.
+
+This modified version is used to match the functions provided by Authy
+for those who do not wish to sign up to Authy's service.
 
 How to install
 ==============
