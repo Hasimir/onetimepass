@@ -63,7 +63,7 @@ def _is_possible_token(token):
     """
     if not isinstance(token, bytes):
         token = six.b(str(token))
-    return token.isdigit() and len(token) <= 6
+    return token.isdigit() and len(token) <= 7
 
 
 def get_hotp(secret, intervals_no, as_string=False, casefold=True):
@@ -128,7 +128,7 @@ def get_totp(secret, as_string=False):
         get_totp(b'MFRGGZDFMZTWQ2LK', as_string=True)
     False
     """
-    interv_no = int(time.time()) // 30
+    interv_no = int(time.time()) // 10
     return get_hotp(secret, intervals_no=interv_no, as_string=as_string)
 
 
